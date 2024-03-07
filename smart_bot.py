@@ -1,7 +1,7 @@
 import os
 import random
 import json
-#import urllib.request
+import urllib.request
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.neural_network import MLPClassifier
 import nest_asyncio
@@ -15,10 +15,10 @@ from telegram.ext import MessageHandler #  Handler (обработчик) - со
 from  telegram.ext import filters
 
 # Загружаем файл с диалогами для обучения модели
-#url = "https://drive.google.com/uc?export==view&id=1f8wI9zXbJCZu5CTPKfVyV7QAKbcHVOlA"
-#filename = "dataset.json"
-filename = "intents_dataset.json"
-#urllib.request.urlretrieve(url, filename)
+url = "https://drive.google.com/uc?export==view&id=1_g0fLSHqAEuRnk-shY3KSspzCMPvHKpO"
+filename = "dataset.json"
+#filename = "intents_dataset.json"
+urllib.request.urlretrieve(url, filename)
 
 # Считываем файл в словарь
 with open(filename, 'r', encoding='UTF-8') as file:
